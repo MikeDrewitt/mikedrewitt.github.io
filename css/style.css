@@ -15,8 +15,14 @@ html, body, .container-fluid {
     /*padding-right: 25%;*/
 }
 
-.my_font {
-    
+@media (max-width: 800px) {
+    .no-margin {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    .font-awesome-icons {
+        font-size: 24px;
+    }
 }
 
 .card, .card-action {

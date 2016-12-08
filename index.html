@@ -22,7 +22,7 @@
 	<script src="js/renderers/CanvasRenderer.js"></script>
 
 	<div class="container-fluid valign-wrapper">
-		<div class="container">
+		<div id="card-container" class="container no-margin">
 			<div class="card hoverable valigns my_center">
 				<div class="card-image">
 					<img class="responsive-img" src="images/sunset.jpg">
@@ -40,6 +40,16 @@
 			</div>
 		</div>
 	</div>
+
+	<script>
+		$(window).on('resize', function() {
+		    if($(window).width() > 400) {
+		        $('#card-container').removeClass('no-margin');
+		    }else{
+		        $('#card-container').addClass('no-margin');
+		    }
+		})
+	</script>
 
 	<div id="WebGLCanvas">
 		<script>
