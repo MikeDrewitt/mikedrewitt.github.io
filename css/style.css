@@ -11,7 +11,7 @@ html, body, .container-fluid {
 
 .my_center {
     /*padding-left: 20%;*/
-    margin-bottom: 20%;
+    /*margin-bottom: 20%;*/
     /*padding-right: 25%;*/
 }
 
@@ -27,6 +27,10 @@ html, body, .container-fluid {
 
 .card, .card-action {
     background-color: rgba(191, 215, 234, 1);
+}
+
+.card {
+  box-shadow: 15px 50px 50px rgba(0,0,0,0.20), 15px 50px 50px rgba(0,0,0,0.20);
 }
 
 .font-awesome-icons {
