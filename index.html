@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Michael Drewitt - A personal site</title>
+	<title>Michael Drewitt</title>
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+	<link rel="shortcut icon" type="image/x-icon" href="images/tab_pic-min.png" />`
 
 	<!-- Compiled and minified CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
@@ -25,7 +27,7 @@
 		<div id="card-container" class="container no-margin">
 			<div class="card valigns my_center">
 				<div class="card-image">
-					<img class="responsive-img" src="images/sunset-vector-min.png">
+					<!-- <img class="responsive-img circle" src="images/sunset-vector-min.png"> -->
 				</div>
 				<div class="card-content my_font">
 					<span class="card-title">Michael Drewitt</span>
@@ -40,16 +42,6 @@
 			</div>
 		</div>
 	</div>
-
-	<script>
-		$(window).on('resize', function() {
-		    if($(window).width() > 400) {
-		        $('#card-container').removeClass('no-margin');
-		    }else{
-		        $('#card-container').addClass('no-margin');
-		    }
-		})
-	</script>
 
 	<div id="WebGLCanvas">
 		<script>
@@ -117,7 +109,7 @@
 
 			// lines
 
-			var line = new THREE.Line( geometry, new THREE.LineBasicMaterial( { color: 0xFF5A5F, opacity: 0.3 } ) );
+			var line = new THREE.Line( geometry, new THREE.LineBasicMaterial( { color: 0xFF5A5F, opacity: 1 } ) );
 			scene.add( line );
 
 			document.addEventListener( 'mousemove', onDocumentMouseMove, false );
