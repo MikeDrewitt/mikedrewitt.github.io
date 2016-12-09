@@ -25,6 +25,10 @@ html, body, .container-fluid {
     }
 }
 
+.card .card-content .card-title {
+    font-weight: bold;
+}
+
 .card, .card-action {
     background-color: rgba(191, 215, 234, 1);
 }
