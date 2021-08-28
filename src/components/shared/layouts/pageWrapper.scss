@@ -1,0 +1,33 @@
+@import 'variables';
+
+.page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  overflow-y: auto;
+  padding: 20px;
+
+  margin: 0 15rem;
+
+  @include response-x-large {
+    margin: 0 10rem;
+  }
+
+  @include response-large {
+    margin: 0 3rem;
+  }
+
+  @include response-medium {
+    margin: 0 2rem;
+  }
+
+  @include response-small {
+    margin: 0 1rem;
+  }
+}
+
+.content {
+  margin-top: 20px;
+  flex-grow: 1;
+}

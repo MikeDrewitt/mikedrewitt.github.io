@@ -1,0 +1,49 @@
+@import 'variables';
+
+$bar-height: 50px;
+$sidebar-width: 260px;
+$hover-effect: 0.7;
+$font-size: 16px;
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1.5rem;
+}
+
+.link {
+  @extend .flex;
+
+  text-decoration: none;
+
+  color: $text-color;
+  font-size: $font-size;
+
+  height: $bar-height;
+
+  &:hover {
+    opacity: $hover-effect;
+  }
+}
+
+.header {
+  @extend .link;
+
+  font-size: 2em;
+
+  font-weight: bold;
+}
+
+.bar {
+  height: $bar-height;
+
+  @extend .flex;
+
+  justify-content: space-between;
+}
+
+.controls {
+  @extend .flex;
+}
