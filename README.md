@@ -25,16 +25,6 @@ Then run the project locally
 npm start
 ```
 
-## Convienent Devtools
-
-If you're not familar with [chrome's devtools](https://developer.chrome.com/docs/devtools/), you should familiarize yourself with them as they are going to be your best friend when developing for this project.
-
-Those tools can be used to debug your code, check network requests, edit css/html, checking local storage and cookies, and much more.
-
-Beyond the base chrome devtools, as a react developer you should probably also install the [react devtools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) which can be used to check component state, as well as update component state, amongst other things.
-
-Since we're also using [redux](https://react-redux.js.org/) in this project, I'd also reccomend installing the [redux devtools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en) as well. This tool is great for updating state, as well as checking state for redux.
-
 ## Working in the project
 
 This project is primarilly built using
@@ -75,12 +65,14 @@ The theme of the application is bootstrapped by the `darkModeToggle` component. 
 
 The theme's state is stored in the browsers local storage so that the chosen theme will persist across users sessions.
 
-## Building the Application
+## Building and Deploying the Application
 
 The application can be built in multiple different ways for multilpe different environments, here are the commands
 
 ```
-npm run build # builds with .env.production
+npm run build
 ```
 
 All of these build to `./portfolio`
+
+Unlike other applications where the bundle is gitignored, we are not ignoring the build. The bundle on master is hosted by github via github pages. The index.html in the root redicrects to the `portfolio/index.html`.

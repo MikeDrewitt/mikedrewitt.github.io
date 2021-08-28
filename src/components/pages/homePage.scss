@@ -15,6 +15,7 @@
 
 .text {
   font-size: 18px;
+  margin-bottom: 4rem;
 }
 
 .projects {
@@ -25,23 +26,34 @@
 
   @include response-medium {
     grid-template-columns: repeat(1, 100%);
-    margin: 0 6rem;
+    margin: 0 6rem 4rem 6rem;
   }
 
   @include response-small {
-    margin: 0 1.5rem;
+    margin: 0 1.5rem 4rem 1.5rem;
   }
 
   @include response-x-small {
-    margin: 0;
+    margin: 0 0 4rem 0;
   }
 }
 
-.chips {
+.technologies {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+
+  @include response-medium {
+    grid-template-columns: repeat(1, 100%);
+  }
+
+  gap: 1.5rem;
+}
+
+.cards {
   @include flex-center;
   flex-wrap: wrap;
 
   gap: 0.5rem;
 
-  max-width: 600px;
+  max-width: 490px;
 }

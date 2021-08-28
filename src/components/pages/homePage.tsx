@@ -25,7 +25,7 @@ const projects: Project[] = [
   {
     name: 'Insight',
     // prettier-ignore
-    description: 'I have a big boy job (full time Senior Product Engineer) at Anthology where I work on an analytics application.',
+    description: 'Insight is a higher education analytics application that aggregates data from internal and external data sources. Users can then create custom queries and build data visualizations.',
     technologies: ['React', '.NET/ Entity Framework', 'Microsoft SQL', 'Express', 'Elasticsearch'],
     outboundLink: 'https://www.anthology.com/solutions/institutional-and-learning-effectiveness/insight',
   },
@@ -41,14 +41,12 @@ const HomePage = () => (
     <h1>Hello! I am Michael Drewitt</h1>
 
     <h2>About</h2>
-    <div className={styles.row}>
-      <p className={styles.text}>
+    <div className={styles.text}>
+      <p>
         I am a full stack web developer who is passionate about building cool applications. I understand the application
         building proccess from database to users, and most things in between. I'm familiar with both scrum and kanban
         work flows; I've been in customer calls; am comfortable describing requirements to anyone; and never back down
         from any technical challenge.
-        <br />
-        I'm always open to chat, so feel free to reach out via any of the below social medias and/or email.
       </p>
     </div>
 
@@ -64,7 +62,7 @@ const HomePage = () => (
         Email
       </FaLink>
       <FaLink regularIcon='file-pdf' href={resume} linkClass={styles.text} newTab>
-        Resume
+        Resumé
       </FaLink>
     </div>
 
@@ -75,14 +73,32 @@ const HomePage = () => (
       ))}
     </div>
 
-    <h2>Frameworks</h2>
-    <div className={styles.row}>
-      <div className={styles.chips}>
-        <Card>React/ Redux</Card>
-        <Card>Node/ Express</Card>
-        <Card>.NET/ Entity Framework</Card>
-        <Card>Python/ Django REST Framework</Card>
-        <Card>Postgres/ MS SQL</Card>
+    <div className={styles.technologies}>
+      <div>
+        <h2>Frameworks</h2>
+        <div className={styles.row}>
+          <div className={styles.cards}>
+            <Card>React/ Redux</Card>
+            <Card>Node/ Express</Card>
+            <Card>.NET/ Entity Framework</Card>
+            <Card>Python/ Django REST Framework</Card>
+            <Card>Postgres/ MS SQL</Card>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2>Languages</h2>
+        <div className={styles.row}>
+          <div className={styles.cards}>
+            <Card>Typescript</Card>
+            <Card>Javascript</Card>
+            <Card>C#</Card>
+            <Card>Python</Card>
+            <Card>CSS/ SCSS</Card>
+            <Card>HTML</Card>
+          </div>
+        </div>
       </div>
     </div>
   </PageWrapper>
