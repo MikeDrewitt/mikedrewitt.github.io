@@ -2,14 +2,14 @@
 
 .card {
   box-shadow: $box-shadow;
-  background: $primary;
+  background: $secondary;
 
   transition: top 0.1s linear;
   position: relative;
   top: 0;
 
   &:hover {
-    top: -10px;
+    top: -0.25rem;
   }
 
   padding: 1rem;

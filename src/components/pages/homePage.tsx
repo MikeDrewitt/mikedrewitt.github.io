@@ -1,7 +1,6 @@
 import React from 'react'
 
 import PageWrapper from 'components/shared/layouts/pageWrapper'
-import Button from 'components/shared/inputs/button'
 import ProjectCard, { Project } from 'components/misc/projectCard'
 import Card from 'components/shared/layouts/card'
 import FaLink from 'components/shared/icons/faLink'
@@ -32,36 +31,57 @@ const projects: Project[] = [
   },
 ]
 
+const email = 'mailto:mikedrewitt@gmail.com'
+const resume = 'https://mikedrewitt.github.io/documents/Drewitt_2021.pdf'
 const github = 'https://github.com/MikeDrewitt'
 const linkedin = 'https://www.linkedin.com/in/michaeldrewitt/'
 
-const HomePage = ({}) => (
+const HomePage = () => (
   <PageWrapper className={styles.center}>
     <h1>Hello! I am Michael Drewitt</h1>
-    <p>I am a full stack web developer who is passionate about building cool applications. </p>
 
+    <h2>About</h2>
+    <p className={styles.about}>
+      I am a full stack web developer who is passionate about building cool applications. I understand the application
+      building proccess from database to users, and most things in between. I'm familiar with both scrum and kanban work
+      flows; I've been in customer calls; am comfortable describing requirements to anyone; and never back down from any
+      technical challenge.
+      <br />
+      I'm always open to chat, so feel free to reach out via any of the below social medias and/or email.
+    </p>
+
+    <h2>Info</h2>
     <div className={styles.row}>
       <FaLink brandIcon='github' href={github} className={styles.exteriorLink} newTab />
       <FaLink brandIcon='linkedin' href={linkedin} className={styles.exteriorLink} newTab />
     </div>
 
     <div className={styles.row}>
-      <Button>Resume</Button>
+      <FaLink regularIcon='paper-plane' href={email} newTab>
+        Email Me
+      </FaLink>
+      <FaLink regularIcon='file-pdf' href={resume} newTab>
+        Resume
+      </FaLink>
     </div>
 
+    <h2>Projects</h2>
     <div className={`${styles.row} ${styles.projects}`}>
       {projects.map((project, index) => (
         <ProjectCard {...project} key={index} />
       ))}
     </div>
 
+    <h2>Technologies</h2>
     <div className={styles.row}>
-      <Card>React</Card>
-      <Card>Typescript/ Javascript</Card>
-      <Card>Node/ Express</Card>
-      <Card>.NET/ Entity</Card>
-      <Card>Python/ Django REST Framework</Card>
-      <Card>Postgres/ MS SQL</Card>
+      <div className={styles.chips}>
+        <Card>React</Card>
+        <Card>Typescript/ Javascript</Card>
+        <Card>Node/ Express</Card>
+        <Card>.NET/ Entity</Card>
+        <Card>Python/ Django REST Framework</Card>
+        <Card>Postgres/ MS SQL</Card>
+      </div>
     </div>
   </PageWrapper>
 )

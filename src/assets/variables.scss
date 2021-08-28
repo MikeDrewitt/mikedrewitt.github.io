@@ -7,41 +7,11 @@
 // Theme colors
 $background: var(--background);
 $text-color: var(--text-color);
-$text-color-secondary: var(--text-color-secondary);
 
-$primary-lighter: var(--primary-lighter);
 $primary: var(--primary);
-$primary-darker: var(--primary-darker);
-
-$secondary-lighter: var(--secondary-lighter);
 $secondary: var(--secondary);
-$secondary-darker: var(--secondary-darker);
-
-$list-item-background: var(--list-item-background);
-$list-item-background-hover: var(--list-item-background-hover);
-$list-item-subtext: var(--list-item-subtext);
 
 $focus: var(--focus);
-
-// These variables WILL NOT update with dark vs light theme
-$grey-lightest: var(--grey-lightest);
-$grey-lighter: var(--grey-lighter);
-$grey: var(--grey);
-
-$blue-lighter: var(--blue-lighter);
-$blue: var(--blue);
-
-$red-lighter: var(--red-lighter);
-$red: var(--red);
-
-$purple-lighter: var(--purple-lighter);
-$purple: var(--purple);
-
-$green-lighter: var(--green-lighter);
-$green: var(--green);
-
-$yellow-lighter: var(--yellow-lighter);
-$yellow: var(--yellow);
 
 // Non color CSS variables
 $border-radius: 3px;
@@ -61,7 +31,7 @@ $x-large: 1500px;
 $large: 1200px;
 $medium: 1000px;
 $small: 600px;
-$extreme: 320px;
+$x-small: 320px;
 
 @mixin response-x-large {
   @media (max-width: $x-large) {
@@ -87,8 +57,8 @@ $extreme: 320px;
   }
 }
 
-@mixin response-extreme {
-  @media (max-width: $extreme) {
+@mixin response-x-small {
+  @media (max-width: $x-small) {
     @content;
   }
 }

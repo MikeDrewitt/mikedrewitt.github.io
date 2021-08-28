@@ -52,31 +52,8 @@ export function getCssVariables() {
     background: body.getPropertyValue('--background'),
 
     primary: body.getPropertyValue('--primary'),
-    primaryDarker: body.getPropertyValue('--primary-darker'),
-
     secondary: body.getPropertyValue('--secondary'),
-    secondaryDarker: body.getPropertyValue('--secondary-darker'),
 
     focus: body.getPropertyValue('--focus'),
-
-    // Other CSS colors
-    greyLightest: body.getPropertyValue('--grey-lightest'),
-    greyLighter: body.getPropertyValue('--grey-lighter'),
-    grey: body.getPropertyValue('--grey'),
-
-    blueLighter: body.getPropertyValue('--blue-lighter'),
-    blue: body.getPropertyValue('--blue'),
-
-    redLighter: body.getPropertyValue('--red-lighter'),
-    red: body.getPropertyValue('--red'),
-
-    purpleLighter: body.getPropertyValue('--purple-lighter'),
-    purple: body.getPropertyValue('--purple'),
-
-    greenLighter: body.getPropertyValue('--green-lighter'),
-    green: body.getPropertyValue('--green'),
-
-    yellowLighter: body.getPropertyValue('--yellow-lighter'),
-    yellow: body.getPropertyValue('--yellow'),
   }
 }

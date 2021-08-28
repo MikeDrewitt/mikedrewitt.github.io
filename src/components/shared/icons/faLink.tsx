@@ -7,12 +7,14 @@ import styles from './faLink.scss'
 type Props = {
   href: string
   newTab?: boolean
-  buttonClass?: string
+  linkClass?: string
+  children?: React.ReactNode
 } & FaIconProps
 
-const FaLink = ({ buttonClass = '', href, newTab, ...props }: Props) => (
-  <a href={href} className={`${buttonClass} ${styles.anchor}`} target={newTab ? '_blank' : undefined}>
-    <FaIcon {...props} />
+const FaLink = ({ linkClass = '', className = '', children = null, href, newTab, ...props }: Props) => (
+  <a href={href} className={`${linkClass} ${styles.anchor}`} target={newTab ? '_blank' : undefined}>
+    <FaIcon {...props} className={`${children ? styles.spacing : ''} ${styles.icon} ${className}`} />
+    {children}
   </a>
 )
 

@@ -14,6 +14,10 @@
   gap: 0.5rem;
 }
 
+.about {
+  font-size: 18px;
+}
+
 .exteriorLink {
   font-size: 35px;
 }
@@ -33,7 +37,17 @@
     margin: 0 2rem;
   }
 
-  @include response-extreme {
+  @include response-x-small {
     margin: 0;
   }
+}
+
+.chips {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 0.5rem;
+
+  max-width: 600px;
 }

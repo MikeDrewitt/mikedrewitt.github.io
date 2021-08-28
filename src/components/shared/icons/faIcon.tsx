@@ -56,6 +56,10 @@ export const RegularIconLibrary = {
   save: FaRegularIcons.faSave,
   sun: FaRegularIcons.faSun,
   moon: FaRegularIcons.faMoon,
+  email: FaRegularIcons.faEnvelope,
+  'paper-plane': FaRegularIcons.faPaperPlane,
+  file: FaRegularIcons.faFile,
+  'file-pdf': FaRegularIcons.faFilePdf,
 }
 
 export const BrandIconLibrary = {
