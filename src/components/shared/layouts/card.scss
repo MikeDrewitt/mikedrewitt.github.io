@@ -1,0 +1,16 @@
+@import 'variables';
+
+.card {
+  box-shadow: $box-shadow;
+  background: $primary;
+
+  transition: top 0.1s linear;
+  position: relative;
+  top: 0;
+
+  &:hover {
+    top: -10px;
+  }
+
+  padding: 1rem;
+}

@@ -3,8 +3,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as FaIcons from '@fortawesome/free-solid-svg-icons'
 import * as FaRegularIcons from '@fortawesome/free-regular-svg-icons'
-
-// import styles from "./faIcon.scss";
+import * as FaBrandIcons from '@fortawesome/free-brands-svg-icons'
 
 export const IconLibrary = {
   eye: FaIcons.faEye,
@@ -59,18 +58,26 @@ export const RegularIconLibrary = {
   moon: FaRegularIcons.faMoon,
 }
 
+export const BrandIconLibrary = {
+  github: FaBrandIcons.faGithub,
+  linkedin: FaBrandIcons.faLinkedin,
+}
+
 export type IconType = keyof typeof IconLibrary
 export type RegularIconType = keyof typeof RegularIconLibrary
+export type BrandIconType = keyof typeof BrandIconLibrary
 
 export type Props = { className?: string } & (
-  | { icon: IconType; regularIcon?: never }
-  | { icon?: never; regularIcon: RegularIconType }
+  | { icon: IconType; regularIcon?: never; brandIcon?: never }
+  | { icon?: never; regularIcon: RegularIconType; brandIcon?: never }
+  | { icon?: never; regularIcon?: never; brandIcon: BrandIconType }
 )
 
-const Icon = ({ icon, regularIcon, className = '' }: Props) => (
+const Icon = ({ icon, regularIcon, brandIcon, className = '' }: Props) => (
   <>
     {icon && <FontAwesomeIcon className={className} icon={IconLibrary[icon]} />}
     {regularIcon && <FontAwesomeIcon className={className} icon={RegularIconLibrary[regularIcon]} />}
+    {brandIcon && <FontAwesomeIcon className={className} icon={BrandIconLibrary[brandIcon]} />}
   </>
 )
 

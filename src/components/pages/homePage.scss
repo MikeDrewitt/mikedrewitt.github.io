@@ -1,0 +1,39 @@
+@import 'variables';
+
+.center {
+  justify-content: center;
+  text-align: center;
+}
+
+.row {
+  margin: 4rem 0;
+
+  display: flex;
+  justify-content: center;
+
+  gap: 0.5rem;
+}
+
+.exteriorLink {
+  font-size: 35px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+
+  gap: 1rem;
+
+  @include response-medium {
+    grid-template-columns: repeat(1, 100%);
+    margin: 0 8rem;
+  }
+
+  @include response-small {
+    margin: 0 2rem;
+  }
+
+  @include response-extreme {
+    margin: 0;
+  }
+}

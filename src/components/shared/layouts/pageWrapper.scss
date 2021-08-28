@@ -25,6 +25,13 @@
   @include response-small {
     margin: 0 1rem;
   }
+
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.page::-webkit-scrollbar {
+  display: none;
 }
 
 .content {

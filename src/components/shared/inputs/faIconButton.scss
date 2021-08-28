@@ -7,6 +7,8 @@
   color: $text-color;
   font-size: 20px;
 
+  transition: opacity 0.1s linear;
+
   &:hover:enabled {
     cursor: pointer;
     opacity: 0.7;
