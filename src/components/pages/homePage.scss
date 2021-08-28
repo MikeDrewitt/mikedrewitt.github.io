@@ -6,20 +6,15 @@
 }
 
 .row {
-  margin: 4rem 0;
+  margin: 1rem 0 4rem 0;
 
-  display: flex;
-  justify-content: center;
+  @include flex-center;
 
   gap: 0.5rem;
 }
 
-.about {
+.text {
   font-size: 18px;
-}
-
-.exteriorLink {
-  font-size: 35px;
 }
 
 .projects {
@@ -30,11 +25,11 @@
 
   @include response-medium {
     grid-template-columns: repeat(1, 100%);
-    margin: 0 8rem;
+    margin: 0 6rem;
   }
 
   @include response-small {
-    margin: 0 2rem;
+    margin: 0 1.5rem;
   }
 
   @include response-x-small {
@@ -43,8 +38,7 @@
 }
 
 .chips {
-  display: flex;
-  justify-content: center;
+  @include flex-center;
   flex-wrap: wrap;
 
   gap: 0.5rem;

@@ -8,8 +8,24 @@
   font-size: 28px;
   font-weight: bold;
 
-  margin-bottom: 2rem;
+  margin-bottom: 0.75rem;
 }
 
-.info {
+.description {
+  min-height: 100px;
+
+  margin-bottom: 0.5rem;
+}
+
+.tags {
+  @include flex-center;
+  flex-wrap: wrap;
+
+  gap: 0.5rem;
+
+  min-height: 75px;
+}
+
+.tag {
+  font-size: 14px;
 }

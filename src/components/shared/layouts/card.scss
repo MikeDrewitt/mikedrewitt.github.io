@@ -4,13 +4,7 @@
   box-shadow: $box-shadow;
   background: $secondary;
 
-  transition: top 0.1s linear;
-  position: relative;
-  top: 0;
-
-  &:hover {
-    top: -0.25rem;
-  }
+  @include pop-up;
 
   padding: 1rem;
 }

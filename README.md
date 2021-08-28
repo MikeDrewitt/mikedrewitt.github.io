@@ -83,4 +83,4 @@ The application can be built in multiple different ways for multilpe different e
 npm run build # builds with .env.production
 ```
 
-All of these build to `./dist`
+All of these build to `./portfolio`

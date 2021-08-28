@@ -74,7 +74,7 @@ module.exports = () => {
       index_head: "./src/services/htmlHead.service.ts",
     },
     output: {
-      path: path.join(__dirname, `/dist`),
+      path: path.join(__dirname, `/portfolio`),
       filename: "[name]-[hash:5].js",
       publicPath: process.env.ROOT_PATH,
     },
@@ -93,7 +93,7 @@ module.exports = () => {
     devServer: {
       hot: true,
       port: process.env.PORT || 9000,
-      contentBase: path.join(__dirname, "dist"),
+      contentBase: path.join(__dirname, "portfolio"),
       historyApiFallback: true,
     },
     devtool: 'inline-source-map',

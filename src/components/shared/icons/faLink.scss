@@ -6,6 +6,8 @@
 
   transition: opacity 0.1s linear;
 
+  @include pop-up;
+
   &:hover {
     opacity: 0.7;
     cursor: pointer;

@@ -8,7 +8,7 @@ import styles from './globalToolbar.scss'
 const GlobalToolbar = () => (
   <div className={styles.bar}>
     <Link to='/' className={styles.header}>
-      JS
+      Portfolio
     </Link>
     <div className={styles.controls}>
       <DarkModeToggle />

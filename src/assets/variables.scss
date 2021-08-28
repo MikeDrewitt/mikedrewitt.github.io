@@ -20,13 +20,7 @@ $box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 
 $font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
 
-@mixin ellipsis {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  word-wrap: normal;
-}
-
+// Responsive Screen Sizes
 $x-large: 1500px;
 $large: 1200px;
 $medium: 1000px;
@@ -61,4 +55,30 @@ $x-small: 320px;
   @media (max-width: $x-small) {
     @content;
   }
+}
+
+@mixin pop-up {
+  transition: top 0.1s linear;
+  position: relative;
+  top: 0;
+
+  &:hover {
+    top: -0.25rem;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 1rem;
+}
+
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
 }

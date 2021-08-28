@@ -41,26 +41,29 @@ const HomePage = () => (
     <h1>Hello! I am Michael Drewitt</h1>
 
     <h2>About</h2>
-    <p className={styles.about}>
-      I am a full stack web developer who is passionate about building cool applications. I understand the application
-      building proccess from database to users, and most things in between. I'm familiar with both scrum and kanban work
-      flows; I've been in customer calls; am comfortable describing requirements to anyone; and never back down from any
-      technical challenge.
-      <br />
-      I'm always open to chat, so feel free to reach out via any of the below social medias and/or email.
-    </p>
+    <div className={styles.row}>
+      <p className={styles.text}>
+        I am a full stack web developer who is passionate about building cool applications. I understand the application
+        building proccess from database to users, and most things in between. I'm familiar with both scrum and kanban
+        work flows; I've been in customer calls; am comfortable describing requirements to anyone; and never back down
+        from any technical challenge.
+        <br />
+        I'm always open to chat, so feel free to reach out via any of the below social medias and/or email.
+      </p>
+    </div>
 
     <h2>Info</h2>
     <div className={styles.row}>
-      <FaLink brandIcon='github' href={github} className={styles.exteriorLink} newTab />
-      <FaLink brandIcon='linkedin' href={linkedin} className={styles.exteriorLink} newTab />
-    </div>
-
-    <div className={styles.row}>
-      <FaLink regularIcon='paper-plane' href={email} newTab>
-        Email Me
+      <FaLink brandIcon='github' href={github} linkClass={styles.text} newTab>
+        Github
       </FaLink>
-      <FaLink regularIcon='file-pdf' href={resume} newTab>
+      <FaLink brandIcon='linkedin' href={linkedin} linkClass={styles.text} newTab>
+        LinkedIn
+      </FaLink>
+      <FaLink regularIcon='paper-plane' href={email} linkClass={styles.text} newTab>
+        Email
+      </FaLink>
+      <FaLink regularIcon='file-pdf' href={resume} linkClass={styles.text} newTab>
         Resume
       </FaLink>
     </div>
@@ -72,13 +75,12 @@ const HomePage = () => (
       ))}
     </div>
 
-    <h2>Technologies</h2>
+    <h2>Frameworks</h2>
     <div className={styles.row}>
       <div className={styles.chips}>
-        <Card>React</Card>
-        <Card>Typescript/ Javascript</Card>
+        <Card>React/ Redux</Card>
         <Card>Node/ Express</Card>
-        <Card>.NET/ Entity</Card>
+        <Card>.NET/ Entity Framework</Card>
         <Card>Python/ Django REST Framework</Card>
         <Card>Postgres/ MS SQL</Card>
       </div>

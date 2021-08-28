@@ -13,10 +13,17 @@ export type Project = {
   outboundLink?: string
 }
 
-const ProjectCard = ({ name, description, github, outboundLink }: Project) => (
+const ProjectCard = ({ name, description, technologies, github, outboundLink }: Project) => (
   <Card className={styles.container}>
     <p className={styles.projectName}>{name}</p>
-    <p className={styles.info}>{description}</p>
+    <p className={styles.description}>{description}</p>
+    <div className={styles.tags}>
+      {technologies.map((tech, index) => (
+        <span key={index} className={styles.tag}>
+          {tech}
+        </span>
+      ))}
+    </div>
     {github && <FaLink brandIcon='github' href={github} newTab />}
     {outboundLink && <FaLink icon='external-link' href={outboundLink} newTab />}
   </Card>
