@@ -74,9 +74,9 @@ module.exports = () => {
       index_head: "./src/services/htmlHead.service.ts",
     },
     output: {
-      path: path.join(__dirname, `/dist/${env}`),
+      path: path.join(__dirname, `/dist`),
       filename: "[name]-[hash:5].js",
-      publicPath: "/",
+      publicPath: process.env.ROOT_PATH,
     },
     optimization: {
       usedExports: true,

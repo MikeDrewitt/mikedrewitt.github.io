@@ -1,7 +1,5 @@
 import React from 'react'
 
-import { toCapitalizedWords } from 'devu-shared-modules'
-
 import styles from './textField.scss'
 
 type Props = {
@@ -31,7 +29,7 @@ const TextField = ({
 
   return (
     <div className={`${styles.textField} ${className}`}>
-      {label && <label htmlFor={id}>{toCapitalizedWords(label)}</label>}
+      {label && <label htmlFor={id}>{label}</label>}
       <input
         id={id}
         type={type}
